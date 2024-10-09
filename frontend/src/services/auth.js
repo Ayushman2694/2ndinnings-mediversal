@@ -21,7 +21,7 @@ export async function login(data) {
 
 function logout(staff) {
   localStorage.clear();
-  editStaff({ username: staff, notificationToken: "" });
+  // editStaff({ username: staff, notificationToken: "" });
 }
 
 export default logout;

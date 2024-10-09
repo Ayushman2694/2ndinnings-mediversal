@@ -14,7 +14,7 @@ import { useGetAllAssignment } from "../query/useGetAllAssignment";
 import { useAllStaff } from "../query/useAllStaff";
 import { useNavigate } from "react-router-dom";
 import logout from "../services/auth";
-import { requestPermission } from "../services/firebase";
+// import { requestPermission } from "../services/firebase";
 
 const DashboardCard = ({ title, value, icon: Icon, trend }) => (
   <div className="bg-white rounded-lg shadow-md p-6 flex items-center">
@@ -98,17 +98,17 @@ export default function AdminDashboardView() {
 
   const userData = JSON.parse(localStorage.getItem("userData")) || null;
 
-  useEffect(() => {
-    const handleRequestPermission = async () => {
-      const result = await requestPermission(userData._id);
-      console.log(result);
-      if (result === "not_granted") {
-        navigate("/no-permission");
-      }
-    };
+  // useEffect(() => {
+  //   const handleRequestPermission = async () => {
+  //     const result = await requestPermission(userData._id);
+  //     console.log(result);
+  //     if (result === "not_granted") {
+  //       navigate("/no-permission");
+  //     }
+  //   };
 
-    handleRequestPermission(); // call the async function
-  }, [userData._id, navigate]);
+  //   handleRequestPermission(); // call the async function
+  // }, [userData._id, navigate]);
 
   if (isLoading || loadingStaff || loadingAssignments) {
     return (

@@ -39,17 +39,17 @@ export default function FrontDeskDashboard() {
   const { isLoading, allPatient: patients } = useAllPatient();
   const userData = JSON.parse(localStorage.getItem("userData")) || null;
 
-  useEffect(() => {
-    const handleRequestPermission = async () => {
-      const result = await requestPermission(userData._id);
-      console.log(result);
-      if (result === "not_granted") {
-        navigate("/no-permission");
-      }
-    };
+  // useEffect(() => {
+  //   const handleRequestPermission = async () => {
+  //     const result = await requestPermission(userData._id);
+  //     console.log(result);
+  //     if (result === "not_granted") {
+  //       navigate("/no-permission");
+  //     }
+  //   };
 
-    handleRequestPermission(); // call the async function
-  }, [userData._id, navigate]);
+  //   handleRequestPermission(); // call the async function
+  // }, [userData._id, navigate]);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

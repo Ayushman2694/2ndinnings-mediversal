@@ -79,17 +79,17 @@ export default function AssessorDashboard() {
   const { isLoading: loadingAssignments, assignments } = useGetAllAssignment();
   const userData = JSON.parse(localStorage.getItem("userData")) || null;
 
-  useEffect(() => {
-    const handleRequestPermission = async () => {
-      const result = await requestPermission(userData._id);
-      console.log(result);
-      if (result === "not_granted") {
-        navigate("/no-permission");
-      }
-    };
+  // useEffect(() => {
+  //   const handleRequestPermission = async () => {
+  //     const result = await requestPermission(userData._id);
+  //     console.log(result);
+  //     if (result === "not_granted") {
+  //       navigate("/no-permission");
+  //     }
+  //   };
 
-    handleRequestPermission(); // call the async function
-  }, [userData._id, navigate]);
+  //   handleRequestPermission(); // call the async function
+  // }, [userData._id, navigate]);
 
   const handleActionClick = (visit) => {
     // Here you would navigate to the appropriate assessment form or view

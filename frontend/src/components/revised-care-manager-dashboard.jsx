@@ -189,17 +189,17 @@ export default function RevisedCareManagerDashboard() {
 
   const userData = JSON.parse(localStorage.getItem("userData")) || null;
 
-  useEffect(() => {
-    const handleRequestPermission = async () => {
-      const result = await requestPermission(userData._id);
-      console.log(result);
-      if (result === "not_granted") {
-        navigate("/no-permission");
-      }
-    };
+  // useEffect(() => {
+  //   const handleRequestPermission = async () => {
+  //     const result = await requestPermission(userData._id);
+  //     console.log(result);
+  //     if (result === "not_granted") {
+  //       navigate("/no-permission");
+  //     }
+  //   };
 
-    handleRequestPermission();
-  }, [userData._id, navigate]);
+  //   handleRequestPermission();
+  // }, [userData._id, navigate]);
 
   const { isLoading: loadingPatients, allPatient } = useAllPatient();
 
