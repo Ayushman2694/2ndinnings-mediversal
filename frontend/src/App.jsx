@@ -38,6 +38,12 @@ import SomeThingWentWrong from "./UI/SomeThingWentWrong";
 import NoPermission from "./UI/NoPermission";
 import ViewCallReports from "./components/view-call-reports";
 import EditPatient from "./components/EditPatient";
+import Index from "./landing_page/index";
+import Plan from "./landing_page/Plan";
+import Services from "./landing_page/Services";
+import Commitment from "./landing_page/Commitment";
+import BlogPage from "./landing_page/blog";
+import ServicesPage from "./landing_page/main-services";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -65,14 +71,20 @@ export default function App() {
               </LoginPrivateRoute>
             }
           />
-          <Route
+          <Route path="/" element={<Index />} />
+          <Route path="/plans" element={<Plan />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/commitment" element={<Commitment />} />
+
+          {/* <Route
             path="/"
             element={
               <LoginPrivateRoute>
                 <BanyanThemePageWithAdmin />
               </LoginPrivateRoute>
             }
-          />
+          /> */}
 
           <Route
             path="admin-dashboard"
