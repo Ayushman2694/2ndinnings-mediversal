@@ -40,7 +40,7 @@ import ViewCallReports from "./components/view-call-reports";
 import EditPatient from "./components/EditPatient";
 import Index from "./landing_page/index";
 import Plan from "./landing_page/Plan";
-import Services from "./landing_page/Services";
+// import Services from "./landing_page/Services";
 import Commitment from "./landing_page/Commitment";
 import BlogPage from "./landing_page/blog";
 import ServicesPage from "./landing_page/main-services";

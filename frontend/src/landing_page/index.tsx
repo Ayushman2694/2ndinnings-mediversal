@@ -37,7 +37,7 @@ export default function Index() {
           >
             Blog
           </Link>
-           <Link
+          <Link
             to="/login"
             className="text-teal-600 hover:text-teal-700 transition-colors"
           >
