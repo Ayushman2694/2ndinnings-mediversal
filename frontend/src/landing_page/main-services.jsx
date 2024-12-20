@@ -13,47 +13,48 @@ import {
   Home,
   Phone,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     icon: Heart,
     title: "24/7 Emergency Care",
     description: "Round-the-clock support for any medical emergencies.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/call.png",
   },
   {
     icon: Activity,
     title: "Health Monitoring",
     description:
       "Regular check-ups and vital sign monitoring for proactive care.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/helth.png",
   },
   {
     icon: Clock,
     title: "Medication Management",
     description: "Timely reminders and assistance with medication intake.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/med.png",
   },
   {
     icon: Users,
     title: "Companionship",
     description:
       "Friendly companionship to combat loneliness and promote mental well-being.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/hands.png",
   },
   {
     icon: Pill,
     title: "Specialized Care",
     description:
       "Tailored care plans for specific health conditions like dementia or diabetes.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/docter.png",
   },
   {
     icon: Home,
     title: "Home Safety Assessments",
     description:
       "Regular evaluations to ensure a safe living environment for seniors.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/paper.png",
   },
 ];
 
@@ -125,7 +126,7 @@ export default function ServicesPage() {
                     <p className="text-teal-600">{service.description}</p>
                   </div>
                 </div>
-                <div className="relative h-40 mb-4">
+                <div className="relative h-30 mb-4">
                   <img
                     src={service.image}
                     alt={service.title}

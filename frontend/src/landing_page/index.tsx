@@ -11,12 +11,12 @@ import Plan from "./Plan";
 export default function Index() {
   return (
     <div className=" bg-gradient-to-br from-[#E6FFF9] via-[#F0FFF9] to-[#E6FFF9]">
-      <header className="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+      <header className="max-w-6xl  mx-auto px-4 py-6 flex justify-between items-center">
         <Link
           to="/"
-          className="text-2xl font-bold text-teal-700 hover:text-teal-800 transition-colors"
+          className="text-2xl w-44 font-bold text-teal-700 hover:text-teal-800 transition-colors"
         >
-          2nd Innings
+          <img src="/mainLogo.png"/>
         </Link>
         <nav className="hidden md:flex space-x-8">
           <Link
@@ -60,20 +60,28 @@ export default function Index() {
                 Even When Miles Apart
               </span>
             </h1>
+            
             <p className="text-xl text-teal-600">
               Premium healthcare services for seniors in Bihar, available 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-[#25D366] hover:bg-[#20BD5A] px-4 py-2 rounded  text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                <a className="flex" href="https://wa.me/your-whatsapp-number">
-                  <PhoneIcon className="w-5 h-5 mr-2" />
-                  Get Started on WhatsApp
-                </a>
-              </button>
-              <button className="bg-white flex px-4 py-2 rounded text-teal-600 font-semibold transition-all duration-300 hover:bg-teal-50 border border-teal-200 shadow-md">
+              <button className="bg-[#25D366] hover:bg-[#20BD5A] px-4 py-2 rounded text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+  <a
+    className="flex"
+    href="https://wa.me/919297680077?text=Hi."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <PhoneIcon className="w-5 h-5 mr-2" />
+    Get Started on WhatsApp
+  </a>
+</button>
+
+              <Link
+            to="/services" className="bg-white flex px-4 py-2 rounded text-teal-600 font-semibold transition-all duration-300 hover:bg-teal-50 border border-teal-200 shadow-md">
                 <Search className="w-5 h-5 mr-2" />
                 Explore Services
-              </button>
+              </Link>
             </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -112,7 +120,7 @@ export default function Index() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-teal-100 to-teal-200 rounded-3xl overflow-hidden shadow-2xl">
               <motion.div
-                className="absolute inset-0 bg-[url('/placeholder.svg?height=600&width=600')] bg-cover bg-center"
+                className="absolute inset-0 bg-[url('/main.webp?height=600&width=600')] bg-cover bg-center"
                 initial={{ opacity: 0, scale: 1.1 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.2 }}

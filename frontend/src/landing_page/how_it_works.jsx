@@ -12,7 +12,7 @@ export default function HowItWorks() {
           href="tel:+918005551234"
           className="inline-block mt-2 text-2xl font-bold text-[#F5A623] hover:text-[#E09612] transition-colors duration-300"
         >
-          +91 800-555-1234
+          +91 929-768-0077
         </a>
       ),
     },
@@ -22,9 +22,9 @@ export default function HowItWorks() {
         "Schedule a no-obligation chat to discuss your loved one's needs.",
       icon: Calendar,
       action: (
-        <button className="mt-2 text-teal-100 border border-teal-100 hover:bg-teal-700/50 px-6 py-2 rounded-full font-medium transition-all duration-300">
+        <a href="https://calendly.com/mediversal-info" className="mt-2 text-teal-100 border border-teal-100 hover:bg-teal-700/50 px-6 py-2 rounded-full font-medium transition-all duration-300">
           Book Consultation
-        </button>
+        </a>
       ),
     },
     {
@@ -93,9 +93,9 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <button className="bg-[#F5A623] hover:bg-[#E09612] text-white px-8 py-3 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <a href="https://calendly.com/mediversal-info" className="bg-[#F5A623] hover:bg-[#E09612] text-white px-8 py-3 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
             Start Your Care Journey Now
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

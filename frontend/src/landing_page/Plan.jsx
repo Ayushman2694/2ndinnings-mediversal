@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 
+// Basic Monthly - https://rzp.io/l/2ndibasicm
+// Basic Yearly - https://rzp.io/l/2ndibasicy
+// Advanced Monthly - https://rzp.io/l/2ndiadvm
+// Advanced Yearly - https://rzp.io/l/2ndiadvy
+// Premium Monthly - https://rzp.io/l/2ndipremm
+// Premium Yearly - https://rzp.io/l/2ndipremy 
+
 const plans = [
   {
     name: "Basic Care",
-    monthlyPrice: "₹4,999",
-    yearlyPrice: "₹54,989",
+    monthlyPrice: "₹299",
+    yearlyPrice: "₹3,499",
+    priceMonthly : "https://rzp.io/l/2ndibasicm",
+    priceYearly : "https://rzp.io/l/2ndibasicy",
     features: [
       { name: "Home Medical Visits", value: "Once a month", included: true },
       {
@@ -45,8 +54,10 @@ const plans = [
   },
   {
     name: "Standard Care",
-    monthlyPrice: "₹9,999",
-    yearlyPrice: "₹109,989",
+    monthlyPrice: "₹599",
+    yearlyPrice: "₹7,099",
+    priceMonthly : "https://rzp.io/l/2ndiadvm",
+    priceYearly : "https://rzp.io/l/2ndiadvy",
     features: [
       { name: "Home Medical Visits", value: "Twice a month", included: true },
       {
@@ -87,8 +98,10 @@ const plans = [
   },
   {
     name: "Premium Care",
-    monthlyPrice: "₹19,999",
-    yearlyPrice: "₹219,989",
+    monthlyPrice: "₹799",
+    yearlyPrice: "₹9,499",
+    priceMonthly : "https://rzp.io/l/2ndipremm",
+    priceYearly : "https://rzp.io/l/2ndipremy",
     features: [
       { name: "Home Medical Visits", value: "Weekly", included: true },
       {
@@ -249,7 +262,7 @@ export default function Plan() {
                   </ul>
                 </div>
                 <div className="p-6 mt-auto">
-                  <button
+                  <a href={billingCycle !== "monthly" ? plan.priceYearly : plan.priceMonthly}
                     className={`w-full py-2 px-4 rounded ${
                       plan.recommended
                         ? "bg-[#F5A623] hover:bg-[#E09612]"
@@ -257,7 +270,7 @@ export default function Plan() {
                     } text-white font-semibold`}
                   >
                     Choose {plan.name}
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
